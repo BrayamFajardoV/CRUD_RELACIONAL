@@ -11,12 +11,12 @@
 <body>
     <br>
     <div class="container">
-        <h1 class="text-center" style="background-color: black; color:white">LISTADO DE PRODUCTOS</h1>
+        <h1 class="text-center" style="background-color: black; color:white; border-radius: 5px;">LISTADO DE PRODUCTOS</h1>
     </div>
     <br>
     <div class="container">
-        <table class="table">
-            <thead>
+        <table class="table table-bordered">
+            <thead class="table-dark">
                 <tr>
                     <th scope="col">Id</th>
                     <th scope="col">Categoria</th>
@@ -47,8 +47,8 @@
                         <th scope="row"><?php echo $resultado['DescripcionProducto']?></th>
                         <th scope="row"><?php echo $resultado['Nombre']?></th>
                         <th>
-                            <a href="" class="btn btn-warning">Editar</a>
-                            <a href="" class="btn btn-danger">Eliminar</a>
+                            <a href="Formularios/EditarForm.php?Id=<?php echo $resultado['IdProducto']?>" class="btn btn-warning">Editar</a>
+                            <a href="CRUD/EliminarDatos.php?Id=<?php echo $resultado['IdProducto']?>" class="btn btn-danger">Eliminar</a>
                         </th>
                     </tr>
 
@@ -60,7 +60,7 @@
             </tbody>
         </table>
         <div class="container">
-            <a href="" class="btn btn-success">Agregar Producto</a>
+            <a href="Formularios/AgregarForm.php" class="btn btn-success">Agregar Producto</a>
         </div>
     </div>
 
